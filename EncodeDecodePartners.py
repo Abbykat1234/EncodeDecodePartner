@@ -16,6 +16,9 @@ def encode(pass_to_encode):
         """converts the endcoded individual integers into individual strings"""
         encodedword_as_string = str(encoded_word)
         joined_string_encoded = joined_string_encoded + encodedword_as_string
+    print(joined_string_encoded)
+
+    return joined_string_encoded
 
     """prints a space between asking the user to input the number they want encoded & the
     message that their password has been encoded & stored"""
