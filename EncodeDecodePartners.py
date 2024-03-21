@@ -20,6 +20,8 @@ def encode(pass_to_encode):
 
     return joined_string_encoded
 
+
+
     """prints a space between asking the user to input the number they want encoded & the
     message that their password has been encoded & stored"""
     print()
@@ -31,9 +33,17 @@ def encode(pass_to_encode):
 """ this is the decode function that my partner writes """
 
 
-def decode():
-        pass
+def decode(password):
 
+    decoded_password = ""       # empty string that we will add everything with
+
+    for character in password:
+        int_word = int(character)
+        decoded_character = str(int_word - 3)       # decodes by subtracting 3
+
+        decoded_password += decoded_character
+
+    return decoded_password     # returns a value for menu option 2
 
 """ the if name == main statement so that it runs with zybooks"""
 if __name__ == '__main__':
@@ -68,11 +78,8 @@ if __name__ == '__main__':
         """logic for the second menu_option"""
         """calls the function decode to decode the password that the user entered"""
         if menu_option == 2:
-            decode()
+            decode(encode(pass_to_encode))  # added a function within a function
         """logic for the third menu_option"""
         """exits the program using the control statement break"""
         if menu_option == 3:
             break
-
-
-
